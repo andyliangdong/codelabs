@@ -36,12 +36,16 @@ class _MyAppState extends State<MyApp> {
                 valueListenable: settings,
                 builder: (context, value, _) {
                   // Create theme instance
+                  final theme = ThemeProvider.of(context);
                   return MaterialApp.router(
                     debugShowCheckedModeBanner: false,
                     title: 'Flutter Demo',
                     // Add theme
                     // Add dark theme
                     // Add theme mode
+                    theme: theme.light(settings.value.sourceColor),
+                    darkTheme: theme.dark(settings.value.sourceColor),
+                    themeMode: theme.themeMode(),
                     routeInformationParser: appRouter.routeInformationParser,
                     routerDelegate: appRouter.routerDelegate,
                   );
