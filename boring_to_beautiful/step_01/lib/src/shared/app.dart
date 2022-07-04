@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
                   final theme = ThemeProvider.of(context);
                   return MaterialApp.router(
                     debugShowCheckedModeBanner: false,
-                    title: 'Flutter Demo',
+                    title: 'CIS-550 Course Project',
                     // Add theme
                     // Add dark theme
                     // Add theme mode

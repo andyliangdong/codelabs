@@ -22,12 +22,12 @@ const List<NavigationDestination> destinations = [
     route: '/',
   ),
   NavigationDestination(
-    label: 'Playlists',
-    icon: Icon(Icons.playlist_add_check), // Modify this line
+    label: 'Recommendations',
+    icon: Icon(Icons.recommend), // Modify this line
     route: '/playlists',
   ),
   NavigationDestination(
-    label: 'Artists',
+    label: 'Actors',
     icon: Icon(Icons.people), // Modify this line
     route: '/artists',
   ),

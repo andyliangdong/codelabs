@@ -17,7 +17,7 @@ class PlaylistHomeScreen extends StatelessWidget {
         return Scaffold(
           primary: false,
           appBar: AppBar(
-            title: const Text('PLAYLISTS'),
+            title: const Text('RECOMMENDATION'),
             toolbarHeight: kToolbarHeight * 2,
           ),
           body: Column(

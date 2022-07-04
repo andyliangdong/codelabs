@@ -39,6 +39,7 @@ class ThemeProvider extends InheritedWidget {
     builders: <TargetPlatform, PageTransitionsBuilder>{
       TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
       TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+      //TargetPlatform.linux: ZoomPageTransitionsBuilder(),
       TargetPlatform.linux: NoAnimationPageTransitionsBuilder(),
       TargetPlatform.macOS: NoAnimationPageTransitionsBuilder(),
       TargetPlatform.windows: NoAnimationPageTransitionsBuilder(),
@@ -150,6 +151,7 @@ class ThemeProvider extends InheritedWidget {
     final colorScheme = colors(Brightness.light, targetColor);
     return ThemeData.light().copyWith(
       // Add page transitions
+      pageTransitionsTheme: pageTransitionsTheme,
       colorScheme: colorScheme,
       appBarTheme: appBarTheme(colorScheme),
       cardTheme: cardTheme(),
@@ -168,6 +170,7 @@ class ThemeProvider extends InheritedWidget {
     final colorScheme = colors(Brightness.dark, targetColor);
     return ThemeData.dark().copyWith(
       // Add page transitions
+      pageTransitionsTheme: pageTransitionsTheme,
       colorScheme: colorScheme,
       appBarTheme: appBarTheme(colorScheme),
       cardTheme: cardTheme(),
